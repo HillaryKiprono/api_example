@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Fetching data from API"),
+          title: const Text("Fetching data from API",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w900),),
           centerTitle: true,
           backgroundColor: Colors.blue.withOpacity(.6),
         ),
@@ -59,6 +59,7 @@ class _HomePageState extends State<HomePage> {
                 child: CircularProgressIndicator(),
               )
             : ListView.builder(
+          physics:BouncingScrollPhysics(),
                 itemCount: users.length,
                 itemBuilder: (context, index) {
                   return Card(
@@ -83,10 +84,10 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             const Expanded(
                               flex: 1,
-                                child: Text("Body :",style: TextStyle(fontWeight:FontWeight.w600),)),
+                                child: Text("Body :",style: TextStyle(fontWeight:FontWeight.w600,color: Colors.blue),)),
                             Expanded(
                                 flex: 4,
-                                child: Text(users[index].body)),
+                                child: Text(users[index].body,style: TextStyle(color: Colors.blue),)),
                           ],
                         ),
                       ),
