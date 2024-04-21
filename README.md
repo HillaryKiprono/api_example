@@ -1,4 +1,4 @@
-I obtained the data from this API Link (https://reqres.in/)
+I obtained the data from this API Link ([https://reqres.in/](https://jsonplaceholder.typicode.com/posts/))
 
 
 ## Demo
